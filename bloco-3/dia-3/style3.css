@@ -9,6 +9,7 @@ div:nth-of-type(2){
 }
 div:nth-of-type(3){
     background-color: rgb(67, 132, 170);
+    font-size: 20px;;
 }
 div:nth-of-type(4){
     background-color: rgb(180, 169, 10);
