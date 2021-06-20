@@ -1,0 +1,8 @@
+header {
+  background-color: aqua;
+  height: 30px;
+
+}
+header li {
+  display: inline-block;
+}
