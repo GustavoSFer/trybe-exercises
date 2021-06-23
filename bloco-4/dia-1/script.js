@@ -30,3 +30,16 @@ if(num1 > num2){
 } else {
   console.log("O numero num1 é menor que o num2");
 }
+
+//Exercicio 3
+let numero1 = 34;
+let numero2 = 43;
+let numero3 = 32;
+
+if(numero1 > numero2 && numero1 > numero3){
+  console.log(numero1 + " é o maior");
+} else if (numero2 > numero1 && numero2 > numero3){
+  console.log(numero2 + " é o maior")
+} else {
+  console.log(numero3 + " é o maior")
+}
