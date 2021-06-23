@@ -24,6 +24,7 @@ let num1 = 22;
 let num2 = 12;
 let comparacao;
 
+// comparação pode ser ==; ===; >; >=; <; <=; !=
 if(num1 > num2){
   console.log("O num1 é maior que o num2");
 } else {
