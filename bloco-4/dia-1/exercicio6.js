@@ -1,4 +1,4 @@
-let peca = "REI";
+let peca = prompt('informe um nome');
 let peca1 = peca.toLowerCase();
 
 switch(peca1){
@@ -12,7 +12,7 @@ switch(peca1){
     console.log("anda em L");
     break;
   case "bispo":
-    console.log("ande em X");
+    console.log("anda em X");
     break;
   case "torre":
     console.log("Anda como um +");
