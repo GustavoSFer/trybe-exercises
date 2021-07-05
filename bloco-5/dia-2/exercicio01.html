@@ -97,7 +97,12 @@
       divCinco.appendChild(addimg);
 
       //8- Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
-      
+      let list = document.createElement('ul');
+      for (let index = 1; index <= 10; index++) {
+        let list_item = document.createElement('li');
+        list_item.innerText = [index];
+        divSeis.appendChild(list_item);
+      }
 
 
     </script>
