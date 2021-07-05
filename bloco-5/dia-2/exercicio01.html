@@ -57,30 +57,35 @@
   </head>
   <body>
     <script>
-      //Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
+      //1- Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
       let recuperaBody = document.getElementsByTagName('body')[0];
       let novoh1 = document.createElement('h1');
       novoh1.innerText = 'Exercício 5.2 - JavaScript DOM';
       recuperaBody.appendChild(novoh1);
 
-      //Adicione a tag div com a classe main-content como filho da tag body ;
+      //2- Adicione a tag div com a classe main-content como filho da tag body ;
       let recuperaBody1 = document.getElementsByTagName('body')[0];
       let criarDiv = document.createElement('div');
       criarDiv.className = "main-content";
       criarDiv.innerText = 'teste do teste';
       recuperaBody1.appendChild(criarDiv);      
 
-      //Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+      //3- Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
       let divDois = document.querySelector('.main-content');
       let novadiv2 = document.createElement('div');
       novadiv2.className = 'conter-content';
       novadiv2.innerText = 'Div2';
       divDois.appendChild(novadiv2);
 
-      //Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+      //4- Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
       let novoP = document.createElement('p');
       novoP.innerText = "Recebe um texto qualquer sendo um paragrafo";
       divDois.appendChild(novoP);
+
+      //5- Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+      let divCinco = document.createElement('div');
+      divCinco.className = 'left-content';
+      recuperaBody1.appendChild(divCinco);
 
     </script>
   </body>
