@@ -62,6 +62,22 @@
       let novoh1 = document.createElement('h1');
       novoh1.innerText = 'Exercício 5.2 - JavaScript DOM';
       recuperaBody.appendChild(novoh1);
+
+      //Adicione a tag div com a classe main-content como filho da tag body ;
+      let recuperaBody1 = document.getElementsByTagName('body')[0];
+      let criarDiv = document.createElement('div');
+      criarDiv.className = "main-content";
+      criarDiv.innerText = 'teste do teste';
+      recuperaBody1.appendChild(criarDiv);      
+
+      //Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+      let divDois = document.querySelector('.main-content');
+      let novadiv2 = document.createElement('div');
+      novadiv2.className = 'conter-content';
+      novadiv2.innerText = 'Div2';
+      divDois.appendChild(novadiv2);
+
+
     </script>
   </body>
 </html>
