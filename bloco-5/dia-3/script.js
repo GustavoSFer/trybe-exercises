@@ -37,3 +37,9 @@ function button(sating) {
 }
 
 /*Criando o botão*/
+const divBoton = document.querySelector('.buttons-container');
+const criaBoton = document.createElement('button');
+criaBoton.innerText = 'Feriado';
+criaBoton.className = 'btn-holiday';
+
+divBoton.appendChild(criaBoton);
