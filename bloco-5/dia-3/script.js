@@ -32,14 +32,34 @@ for (let index = 0; index < dezDaysList.length; index++) {
   }
 }
 
+// Exercicio 2
 function button(sating) {
-
-}
-
-/*Criando o botão*/
-const divBoton = document.querySelector('.buttons-container');
+  const divBoton = document.querySelector('.buttons-container');
 const criaBoton = document.createElement('button');
 criaBoton.innerText = 'Feriado';
 criaBoton.className = 'btn-holiday';
 
 divBoton.appendChild(criaBoton);
+}
+
+button('Feriado');
+
+
+// Exercicio 3
+const evenClick = document.querySelector('.btn-holiday');
+evenClick.addEventListener("click", recebeClick);
+
+function recebeClick() {
+  const mudaCor = document.querySelectorAll('.holiday');
+  for(let i = 0; i < mudaCor.length; i++) {
+    
+    if( mudaCor[i].style.backgroundColor === 'green' ){
+      mudaCor[i].style.backgroundColor = 'rgb(238,238,238)';
+      console.log('clidado2')
+    } else {
+      mudaCor[i].style.backgroundColor = 'green';
+      console.log('clidado1')
+    }
+  }
+}
+
