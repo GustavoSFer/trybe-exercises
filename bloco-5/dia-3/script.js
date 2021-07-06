@@ -63,3 +63,14 @@ function recebeClick() {
   }
 }
 
+// Exercicio 4
+function sexta(string) {
+  const recuSexta = document.querySelector('.buttons-container');
+  const sexta = document.createElement('button');
+  sexta.innerText = 'Sexta-Feira';
+  sexta.className = 'btn-friday';
+
+  recuSexta.appendChild(sexta);
+}
+
+sexta('sexta-feira');
