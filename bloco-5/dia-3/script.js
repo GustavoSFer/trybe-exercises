@@ -74,3 +74,20 @@ function sexta(string) {
 }
 
 sexta('sexta-feira');
+
+// Exercicio 5
+const diaSexta = [4,11,18,25];
+const sextou = document.querySelector('.btn-friday');
+sextou.addEventListener("click", mudarSexta);
+
+function mudarSexta(){
+  const mudaSexta = document.querySelectorAll('.friday');
+
+    for (let index = 0; index < mudaSexta.length; index++) {
+      if(mudaSexta[index].innerText === 'Sextouu'){
+        mudaSexta[index].innerText = diaSexta[index];
+      } else {
+        mudaSexta[index].innerText = 'Sextouu';
+      }
+    }
+}
