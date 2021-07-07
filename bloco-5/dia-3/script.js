@@ -110,3 +110,6 @@ function tirarZoom() {
 
 zoom();
 tirarZoom();
+
+
+// Exercicio 7
