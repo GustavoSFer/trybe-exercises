@@ -91,3 +91,22 @@ function mudarSexta(){
       }
     }
 }
+
+//exercicio 6
+function zoom() {
+  let darZoom = document.querySelector('#days');
+  darZoom.addEventListener("mouseover", function(evento) {
+    evento.target.style.fontSize = "30px";
+    console.log(evento.target);
+  });
+}
+
+function tirarZoom() {
+  let darZoom = document.querySelector('#days');
+  darZoom.addEventListener("mouseout", function(evento){
+    evento.target.style.fontSize = '20px';
+  });
+}
+
+zoom();
+tirarZoom();
