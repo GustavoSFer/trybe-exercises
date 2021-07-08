@@ -7,6 +7,7 @@ header {
   background-color: cadetblue;
   border: 1px solid red;
   text-align: center;
+  line-height: 150px;
 }
 .container{
   width: 95%;
