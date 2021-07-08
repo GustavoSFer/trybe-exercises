@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  height: 150px;
+  background-color: cadetblue;
+  border: 1px solid red;
+  text-align: center;
+  line-height: 150px;
+}
+.container{
+  width: 95%;
+  min-width: 780px;
+  margin: auto;
+}
+aside {
+  width: 25%;
+  min-width: 220px;
+  border: 1px solid blue;
+  display: inline-block;
+}
+
+section {
+  width: 60%;
+  min-width: 500px;
+  border: 1px solid red;
+  display: inline-block;
+}
+.sessao {
+  background-color: white;
+}
+.cor1, .cor2, .cor3, .cor4 {
+  width: 30px;
+  height: 30px;
+  border: 1px solid red;
+  display: inline-block;
+}
+.cor1 {
+  background-color: antiquewhite;
+}
+.cor2 {
+  background-color: bisque;
+}
+.cor3 {
+  background-color: aqua;
+}
+.cor4 {
+  background-color: burlywood;
+}
