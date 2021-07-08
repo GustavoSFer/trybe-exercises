@@ -9,7 +9,7 @@ criaBotao.innerText = "Mudar de cor";
 botao.appendChild(criaBotao);
 
 criaBotao.addEventListener("click", function(){
-  let corFundo = document.querySelector('body');
+  let corFundo = document.querySelector('.sessao');
   if(corFundo.style.backgroundColor === 'blue') {
     corFundo.style.backgroundColor = 'white';
     console.log('branco');
