@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  border: 0;
+}
+label {
+  display: block;
+  margin-top: 20px;
+}
+input {
+  border: 1px solid black;
+  height: 20px;
+}
+label.tipo {
+  margin-top: 5px;
+  line-height: 10px;
+}
+span {
+  display: block;
+  margin-top: 20px;
+}
+fieldset, textarea {
+  margin-bottom: 20px;
+  border: 1px solid black;
+  padding: 15px;
+}
+
+textarea {
+  min-width: 250px;
+  min-height: 110px;
+}
+button {
+  padding: 5px 10px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+}

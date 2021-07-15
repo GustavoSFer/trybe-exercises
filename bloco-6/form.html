@@ -16,6 +16,7 @@
   <form action="" method="get">
 
     <fieldset>
+      <legend>Dados pessoais</legend>
       <label for="full-name">Nome</label>
       <input type="text" name="ame" id="full-name" maxlength="40" required>
       <label for="email">E-mail</label>
@@ -29,12 +30,13 @@
 
       <label for="estado">Estado</label>
       <select name="estado" id="estado" required>
+        
         <!--Fazer via JavaScript as opçoes-->
       </select>
       <span>tipo</span>
-      <label for="tipo-casa"><input type="radio" name="tipo" id="tipo-casa" required> Casa</label>
+      <label class="tipo" for="tipo-casa"><input type="radio" name="tipo" id="tipo-casa" required> Casa</label>
       
-      <label for="tipo-apto"><input type="radio" name="tipo" id="tipo-apto">Apartamento</label>
+      <label class="tipo" for="tipo-apto"><input type="radio" name="tipo" id="tipo-apto">Apartamento</label>
       
       
     </fieldset>
@@ -55,5 +57,6 @@
     <button type="reset">Limpar</button>
   </form>
 
+  <script src="script.js"></script>
 </body>
 </html>
