@@ -12,7 +12,3 @@ for (let index = 0; index < estado.length; index++) {
   
 }
 
-let enviar = document.getElementById('enviar');
-enviar.addEventListener('click', function(event){
-  event.preventDefault();
-});
