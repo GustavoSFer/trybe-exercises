@@ -8,7 +8,7 @@ pega.addEventListener("click", function(evento){
   fundo.style.backgroundColor = cor.getPropertyValue('background-color');
 });
 
-
+//branch bloco5dia4
 
 let botao = document.querySelector('#mudaCor');
 let criaBotao = document.createElement('button');
