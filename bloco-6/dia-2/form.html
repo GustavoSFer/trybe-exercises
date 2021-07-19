@@ -7,16 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario Curriculo</title>
 
-  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
-
-  <script src="jquery-3.6.0.min.js"></script>
-
-  <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-
+  <link rel="stylesheet" href="dist/css/DatePickerX.min.css"> <!--Net-->
+  <script src="dist/js/DatePickerX.min.js"></script> <!--Net-->
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css"> <!--Net-->
+  <script src="jquery-3.6.0.min.js"></script> <!--Net-->
+  <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script> <!--Net-->
   <link rel="stylesheet" href="style.css">
 
 </head>
-
 <body>
 
   <header>
@@ -52,12 +50,13 @@
         <input class="form-control" type="text" name="cidade" id="cidade" maxlength="28" required>
       </div>
 
-      <div class="form-group my-3 estado">
+      <div class="form-group my-3 tamanho">
         <label for="estado">Estado</label>
         <select class="form-select mt-1" name="estado" id="estado" required>
           <!--Fazer via JavaScript as opçoes-->
         </select>
       </div>
+
       <div class="form-group my-3">
         <h3>Tipo</h3>
         <label class="tipo form-check-label" for="tipo-casa"><input class="form-check-input " type="radio" name="tipo"
@@ -71,19 +70,22 @@
     <fieldset>
       <legend class="my-4">Ultimo emprego</legend>
       <div class="form-floating">
-        <label for="resulmo-curriculo">Resulmo</label>
+        <label for="resulmo-curriculo" >teees</label>
         <textarea class="form-control textarea1" name="resulmo" id="resulmo-curriculo" cols="30" rows="10"
           maxlength="1000" style="height: 150px" required></textarea>
       </div>
-      <div>
+
+      <div class="form-group my-3">
         <label for="cargo">Cargo</label>
         <input class="form-control" type="text" name="cargo" id="cargo" maxlength="40" required>
       </div>
-      <div>
+
+      <div class="form-group my-3">
         <label for="descricao-cargo">Descrição do cargo</label>
         <input class="form-control" type="text" name="descricao" id="descricao-cargo" maxlength="500" required>
       </div>
-      <div>
+
+      <div class="form-group my-3 tamanho">
         <label for="inicio">Data de inicio</label>
         <input class="form-control" type="text" name="data-inicio" id="inicio" required>
         <!--Revificar via JavaScript dia deve ser > 0 e <=31; o Mês deve ser > 0 e <= 12 e ano nao pode ser negativo - caso ivalido dar um alert-->
@@ -91,11 +93,9 @@
     </fieldset>
 
     <button class="btn btn-success mt-3" type="submit">Enviar</button>
-    <button class="btn btn-success mt-3" type="reset">Limpar</button>
+    <button class="btn btn-success mt-3 mx-3" type="reset">Limpar</button>
   </form>
-
 
   <script src="script.js"></script>
 </body>
-
 </html>
