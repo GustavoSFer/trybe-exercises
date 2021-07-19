@@ -65,6 +65,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  flex-basis: 700px;
 }
 
 .card-container div {
@@ -75,6 +76,8 @@ body {
   height: 150px;
   justify-content: center;
   margin: 10px;
+  flex-basis: 16%;
+  flex-grow: 1;
 }
 
 .aside-container {
