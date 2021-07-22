@@ -4,3 +4,4 @@ let ordenar = (a,b) => {
   return (a-b);
 }
 console.log(oddsAndEvens.sort(ordenar))
+console.log(`Os numero são: ${oddsAndEvens.sort(ordenar)}`)
