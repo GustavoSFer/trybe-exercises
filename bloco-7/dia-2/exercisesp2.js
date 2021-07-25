@@ -33,3 +33,8 @@ let verificaKey = (obj) => {
 }
 
 console.log(verificaKey(lesson2))
+
+let tamanhoObj = (obj) => {
+  return Object.keys(obj).length
+}
+console.log(tamanhoObj(lesson2));
