@@ -23,7 +23,13 @@ let addParametro = (obj, chave, valor) => {
   let turno = chave;
   let valore = valor;
 
-  obje.turno = valore;
+  return obje.turno = valore;
 }
 addParametro(lesson2, lesson2.periodo, 'tarde');
 console.log(lesson2)
+
+let verificaKey = (obj) => {
+  return Object.values(obj);
+}
+
+console.log(verificaKey(lesson2))
