@@ -29,7 +29,7 @@ addParametro(lesson2, lesson2.periodo, 'tarde');
 console.log(lesson2)
 
 let verificaKey = (obj) => {
-  return Object.values(obj);
+  return Object.keys(obj);
 }
 
 console.log(verificaKey(lesson2))
@@ -38,3 +38,7 @@ let tamanhoObj = (obj) => {
   return Object.keys(obj).length
 }
 console.log(tamanhoObj(lesson2));
+
+let listValues = (obj) => Object.values(obj);
+
+console.log(listValues(lesson1))
