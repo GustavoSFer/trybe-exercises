@@ -17,3 +17,13 @@ const lesson3 = {
   professor: 'Maria Clara',
   turno: 'noite',
 };
+
+let addParametro = (obj, chave, valor) => {
+  let obje = obj;
+  let turno = chave;
+  let valore = valor;
+
+  obje.turno = valore;
+}
+addParametro(lesson2, lesson2.periodo, 'tarde');
+console.log(lesson2)
