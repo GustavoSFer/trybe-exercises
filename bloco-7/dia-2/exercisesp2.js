@@ -46,3 +46,7 @@ console.log(tamanhoObj(lesson2));
 let listValues = (obj) => Object.values(obj);
 
 console.log(listValues(lesson1))
+
+//5 verificar porque só esta entrando o ultimo obj
+const allLessons = Object.assign({}, lesson1, lesson2, lesson3);
+console.log(allLessons);
