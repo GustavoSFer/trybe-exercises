@@ -19,7 +19,7 @@ assert.strictEqual(sum(0, 0), 0);
 Teste se a mensagem de erro é "parameters must be numbers" quando realizar a chamada sum(4, "5")
 */
 
-//4 Espera que o bloco lance um erro. o erro pode ser construtor, RegExp ou função de validação.
+//3 Espera que o bloco lance um erro. o erro pode ser construtor, RegExp ou função de validação.
 //O assert.throws permite verificar erros específicos em suas funções.
 //estamos passando uma função sem nome e dentro dela a função sum e esta nos retornando um erro
 // com isso esta correto.
@@ -27,3 +27,7 @@ assert.throws(() => {
   sum(4, '5');
 });
 
+// 4
+assert.throws(() => {
+  sum(4, '5');
+}, /^Error: parameters must be numbers$/);
