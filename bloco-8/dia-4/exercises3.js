@@ -64,12 +64,16 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
-const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
+const expectedResult = 43;
 
-function reduceNames() {
+function averageAge() {
   // escreva seu código aqui
-  return books.reduce((acc, valor) => acc += `${valor.author.name},`, '')
+  let qtdAutores = books.length;
+  let IdadeLançado = books.reduce((acc, arr) => (
+    acc += (arr.releaseYear - arr.author.birthYear)
+    
+  ), 0);
+  return IdadeLançado / qtdAutores;
 }
 
-console.log(reduceNames());
-assert.strictEqual(reduceNames(), expectedResult);
+assert.strictEqual(averageAge(), expectedResult);
