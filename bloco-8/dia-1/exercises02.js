@@ -1,25 +1,9 @@
-const geraNumero = (num) => {
-  const sorte = Math.round(Math.random() * 5);
-  if ( num === sorte){
-    return 'parabéns você ganhou' 
-  }else { 
-    return 'Que pena! Tente de novo.'
-  }
+const comparacao = (n1, n2) => n1 === n2;
+
+const loto = (numero,callback) => {
+  const sorte = Math.floor(Math.random()*5);
+  
+  return callback(numero, sorte) ? 'Ganhooou!!!' : 'Que pena, tente de novo :/';
 }
 
-
-console.log(geraNumero(2));
-
-const geraNumero = () => {
-  const sorte = Math.round(Math.random() * 5);
-  return sorte;
-}
-const verificar = (numero, geraNumero) => {
-  if (numero === geraNumero) {
-    return 'Parabéns voce ganhou!!!'
-  } else {
-    return 'Que pena, Tente de novo!'
-  }
-}
-
-console.log(verificar(2))
+console.log(loto(2, comparacao))
