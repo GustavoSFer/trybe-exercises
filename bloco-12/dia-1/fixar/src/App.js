@@ -1,20 +1,17 @@
-import './App.css';
 import React from 'react';
+import './App.css';
+
+function click() {
+  console.log("Clicou no botão!")
+}
 
 class App extends React.Component {
-  constructor() {
-    super()
-    this.click = this.click.bind(this);
-  }
-  click() {
-    console.log('clicado!')
-    console.log(this);
-  }
   render() {
-    return(
-      <button type="button" onClick={this.click}>Clique Aqui!</button>
+    return (
+      <button onClick={ click }>Meu botão</button>
     );
   }
+
 }
 
 export default App;
