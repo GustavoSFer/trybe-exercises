@@ -9,6 +9,7 @@ class App extends React.Component {
       numeroClick: 0,
       mouseDentro: 0,
       mouseFora: 0,
+      corClasse: '',
     }
 
     this.click = this.click.bind(this);
@@ -19,18 +20,21 @@ class App extends React.Component {
 
 
   click() {
+    console.log(this.state.numeroClick);
     this.setState((estadoAnterio, _props)=> ({
       numeroClick: estadoAnterio.numeroClick + 1,
-    }))
+    }));
+    console.log(this.state.numeroClick); // porque ele vem com 0 e nao atualizado com o 1?
     console.log(this)
-    console.log("Clicou no botão!")
   }
+
   onMouseOver() {
     this.setState((estadoAnterior) => ({
       mouseDentro: estadoAnterior.mouseDentro + 1,
     }))
     console.log(this);
   }
+
   onMouseOut() {
     this.setState((anterior) => ({
       mouseFora: anterior.mouseFora + 1,
@@ -39,12 +43,16 @@ class App extends React.Component {
     console.log("Tirou o mouse de cima!")
   }
 
+  corClass(num) {
+    return (num % 2 === 0) ? "green" : 'white';
+
+  }
   render() {
     return (
       <div>
-        <button onClick={this.click} >Botao 1</button>
-        <button onMouseOver={this.onMouseOver} >Botao 2</button>
-        <button onMouseOut={this.onMouseOut} >Botao 3</button>
+        <button onClick={this.click} style={{backgroundColor: this.corClass(this.state.numeroClick) }} >Botao 1</button>
+        <button onMouseOver={this.onMouseOver} style={{ background: this.corClass(this.state.mouseDentro) }}>Botao 2</button>
+        <button onMouseOut={this.onMouseOut} style={{ background: this.corClass(this.state.mouseFora) }}>Botao 3</button>
 
       </div>
     );
