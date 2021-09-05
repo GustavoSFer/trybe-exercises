@@ -1,0 +1,36 @@
+body {
+  font-size: 20px;
+  margin: 15px;
+  text-align: center;
+}
+h1 {
+ font-size: 1.6em;
+}
+h2 {
+ font-size: 1.3em;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 20px 2px;
+}
+@media screen and (min-width: 700px) {
+  body {
+    background-color: rgb(246, 243, 243);
+    font-size: 25px;
+    margin: 5px;
+  }
+  main {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+  }
+  main h2 {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+  }
+}
