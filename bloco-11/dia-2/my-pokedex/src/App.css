@@ -1,0 +1,11 @@
+.card-pokemon {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid red;
+  margin: 15px;
+  width: 250px;
+}
+
+.info-pokemon {
+  flex-direction: column;
+}
