@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+.verde {
+  background-color: green;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
