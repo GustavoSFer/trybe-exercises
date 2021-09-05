@@ -12,3 +12,4 @@ for (let index = 0; index < estado.length; index++) {
   
 }
 
+document.getElementById('inicio').DatePickerX.init();
