@@ -7,19 +7,19 @@ const geraNumero = (num) => {
   }
 }
 
+
 console.log(geraNumero(2));
 
-
-
-const geraNumero = (numero) => {
+const geraNumero = () => {
   const sorte = Math.round(Math.random() * 5);
-  if ( numero === sorte){
-    return 'parabéns você ganhou' 
-  }else { 
-    return 'Que pena! Tente de novo.'
+  return sorte;
+}
+const verificar = (numero, geraNumero) => {
+  if (numero === geraNumero) {
+    return 'Parabéns voce ganhou!!!'
+  } else {
+    return 'Que pena, Tente de novo!'
   }
 }
 
-const info = (func, numero) => {
- 
-}
+console.log(verificar(2))
