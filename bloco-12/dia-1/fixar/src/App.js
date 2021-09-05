@@ -25,7 +25,8 @@ class App extends React.Component {
       numeroClick: estadoAnterio.numeroClick + 1,
     }));
     console.log(this.state.numeroClick); // porque ele vem com 0 e nao atualizado com o 1?
-    console.log(this)
+    console.log(this);
+    console.log(this.corClass(this.state.numeroClick));
   }
 
   onMouseOver() {
