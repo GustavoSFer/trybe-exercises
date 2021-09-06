@@ -10,6 +10,7 @@ class Form extends React.Component {
       email: '',
       comentario:'',
       aceito: false,
+      file: '',
     }
     this.handleState = this.handleState.bind(this);
   }
@@ -58,6 +59,7 @@ class Form extends React.Component {
             Aceita receber email?
             <input type="checkbox" name="aceito" id="aceito" value={this.state.aceito} onChange={this.handleState} />
           </label>
+          <input type="file" name="file" value={this.state.file} onChange={this.handleState}/>
         </form>
       </div>
     );
