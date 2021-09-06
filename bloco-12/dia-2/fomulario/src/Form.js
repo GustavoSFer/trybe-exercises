@@ -1,4 +1,5 @@
 import React from 'react'
+import TextoInfo from './TextoInfo';
 
 class Form extends React.Component {
   constructor() {
@@ -11,6 +12,7 @@ class Form extends React.Component {
       comentario:'',
       aceito: false,
       file: '',
+      textoInfo: '',
     }
     this.handleState = this.handleState.bind(this);
   }
@@ -28,33 +30,43 @@ class Form extends React.Component {
     return(
       <div>
         <h1>Meu primeiro formulário em React</h1>
+        
+        <TextoInfo value={this.state.textoInfo} onChange={this.handleState} />
+
         <form>
-          <label htmlFor="estado"> Estado: 
-            <select name="estado" id="estado" value={this.state.estado} onChange={this.handleState} >
-              <option value="SP">SP</option>
-              <option value="RJ">RJ</option>
-              <option value="BH">BH</option>
-              <option value="MG">MG</option>
-              <option value="AM">AM</option>
-            </select>
-          </label>
+          <fieldset>
+            <legend>Dados Pessoais:</legend>
+            <label htmlFor="nome"> Nome: 
+              <input type="text" name="nome" id="nome" value={this.state.nome} onChange={this.handleState}/>
+            </label>
+            <br />
+            <label htmlFor="idade"> Idade: 
+              <input type="number" name="idade" id="idade" value={this.state.idade} onChange={this.handleState} />
+            </label>
+            <br />
+            <label htmlFor="email"> Email: 
+              <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleState} />
+            </label>
+          </fieldset>
           <br />
-          <label htmlFor="nome"> Nome: 
-            <input type="text" name="nome" id="nome" value={this.state.nome} onChange={this.handleState}/>
-          </label>
-          <br />
-          <label htmlFor="idade"> Idade: 
-            <input type="number" name="idade" id="idade" value={this.state.idade} onChange={this.handleState} />
-          </label>
-          <br />
-          <label htmlFor="email"> Email: 
-            <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleState} />
-          </label>
-          <br />
-          <label htmlFor="comentario"> Deixe sei comentário:
-            <textarea type="text" id="comentario" name="comentario" value={this.state.cometario} onChange={this.handleState} />
-          </label>
-          <br />
+          <fieldset>
+            <legend>Comentário/Local: </legend>
+            <label htmlFor="comentario"> Deixe sei comentário:
+              <textarea type="text" id="comentario" name="comentario" value={this.state.cometario} onChange={this.handleState} />
+            </label>
+            <br />
+            <label htmlFor="estado"> Estado: 
+              <select name="estado" id="estado" value={this.state.estado} onChange={this.handleState} >
+                <option value="SP">SP</option>
+                <option value="RJ">RJ</option>
+                <option value="BH">BH</option>
+                <option value="MG">MG</option>
+                <option value="AM">AM</option>
+              </select>
+            </label>
+            <br />
+          </fieldset>
+
           <label htmlFor="aceito">
             Aceita receber email?
             <input type="checkbox" name="aceito" id="aceito" value={this.state.aceito} onChange={this.handleState} />
