@@ -9,12 +9,14 @@ class Form extends React.Component {
       idade: 0,
       email: '',
       comentario:'',
+      aceito: false,
     }
     this.handleState = this.handleState.bind(this);
   }
 
   handleState({ target }) {
-    const {name, value} = target;
+    const value = (target.type === 'checkbox') ? target.checked : target.value;
+    const { name } = target;
 
     this.setState({
       [name]: value
@@ -50,6 +52,11 @@ class Form extends React.Component {
           <br />
           <label htmlFor="comentario"> Deixe sei comentário:
             <textarea type="text" id="comentario" name="comentario" value={this.state.cometario} onChange={this.handleState} />
+          </label>
+          <br />
+          <label htmlFor="aceito">
+            Aceita receber email?
+            <input type="checkbox" name="aceito" id="aceito" value={this.state.aceito} onChange={this.handleState} />
           </label>
         </form>
       </div>
