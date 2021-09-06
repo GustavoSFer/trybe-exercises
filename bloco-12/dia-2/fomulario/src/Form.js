@@ -1,5 +1,6 @@
 import React from 'react'
 import TextoInfo from './TextoInfo';
+import Email from './Email';
 
 class Form extends React.Component {
   constructor() {
@@ -44,9 +45,7 @@ class Form extends React.Component {
               <input type="number" name="idade" id="idade" value={this.state.idade} onChange={this.handleState} />
             </label>
             <br />
-            <label htmlFor="email"> Email: 
-              <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleState} />
-            </label>
+           <Email value={ this.state.email } onChange={this.handleState} />
           </fieldset>
           <br />
           <fieldset>
