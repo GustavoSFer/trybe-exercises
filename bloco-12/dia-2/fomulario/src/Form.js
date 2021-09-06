@@ -10,19 +10,14 @@ class Form extends React.Component {
       email: '',
       comentario:'',
     }
-    this.nome = this.nome.bind(this);
-    this.idade = this.idade.bind(this);
+    this.handleState = this.handleState.bind(this);
   }
 
-  nome(event) {
-    this.setState({
-      nome: event.target.value,
-    })
-  }
+  handleState({ target }) {
+    const {name, value} = target;
 
-  idade(event) {
     this.setState({
-      idade: event.target.value,
+      [name]: value
     })
   }
 
@@ -32,7 +27,7 @@ class Form extends React.Component {
         <h1>Meu primeiro formulário em React</h1>
         <form>
           <label htmlFor="estado"> Estado: 
-            <select name="estado" id="estado">
+            <select name="estado" id="estado" value={this.state.estado} onChange={this.handleState} >
               <option value="SP">SP</option>
               <option value="RJ">RJ</option>
               <option value="BH">BH</option>
@@ -42,19 +37,19 @@ class Form extends React.Component {
           </label>
           <br />
           <label htmlFor="nome"> Nome: 
-            <input type="text" id="nome" value={this.state.nome} onChange={this.nome}/>
+            <input type="text" name="nome" id="nome" value={this.state.nome} onChange={this.handleState}/>
           </label>
           <br />
           <label htmlFor="idade"> Idade: 
-            <input type="number" id="idade" value={this.state.idade} onChange={this.idade} />
+            <input type="number" name="idade" id="idade" value={this.state.idade} onChange={this.handleState} />
           </label>
           <br />
           <label htmlFor="email"> Email: 
-            <input type="email" id="email" />
+            <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleState} />
           </label>
           <br />
           <label htmlFor="comentario"> Deixe sei comentário:
-            <textarea type="text" id="comentario" />
+            <textarea type="text" id="comentario" name="comentario" value={this.state.cometario} onChange={this.handleState} />
           </label>
         </form>
       </div>
