@@ -14,6 +14,7 @@ class Form extends React.Component {
       aceito: false,
       file: '',
       textoInfo: '',
+      formularioComErros: true,
     }
     this.handleState = this.handleState.bind(this);
   }
@@ -27,18 +28,31 @@ class Form extends React.Component {
     })
   }
 
+  formularioComErros(value) {
+    (value === true) ? this.setState({
+      formularioComErros: false,
+    }) : this.setState({
+      formularioComErros: true,
+    })
+  }
+
   render() {
     return(
       <div>
         <h1>Meu primeiro formulário em React</h1>
         
-        <TextoInfo value={this.state.textoInfo} onChange={this.handleState} />
+        <TextoInfo value={this.state.textoInfo} onChange={this.handleState} formularioComErros={this.formularioComErros}/>
 
         <form>
           <fieldset>
             <legend>Dados Pessoais:</legend>
             <label htmlFor="nome"> Nome: 
-              <input type="text" name="nome" id="nome" value={this.state.nome} onChange={this.handleState}/>
+              <input type="text" 
+                name="nome" 
+                id="nome" 
+                value={this.state.nome} 
+                onChange={this.handleState}
+              />
             </label>
             <br />
             <label htmlFor="idade"> Idade: 
