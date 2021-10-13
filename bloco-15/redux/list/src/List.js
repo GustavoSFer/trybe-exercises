@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import ListaGerado from './ListaGerado';
+import { ADD_ITEM_LISTA } from './redux/Actions'
 
 class List extends Component {
   constructor() {
@@ -33,5 +35,9 @@ class List extends Component {
     );
   }
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  type: ADD_ITEM_LISTA
+})
 
 export default List;
