@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import MyContext from './MyContext';
 
-function Lista({ todo }) {
+function Lista() {
+  const { todo } = useContext(MyContext);
   return (
     <div>
       <ul>

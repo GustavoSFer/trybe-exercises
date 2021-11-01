@@ -1,18 +1,15 @@
-import { useState } from 'react';
+import ListaProvider from './ListaProvider';
 import Input from './Input';
 import Lista from './Lista';
 
 function App() {
-  const [todo, setTodo] = useState([]);
-
-  const addTodo = (newTodo) => {
-    setTodo(todo.concat(newTodo));
-  }
-
+ 
   return (
     <div>
-      <Input addTodo={addTodo} />
-      <Lista todo={todo} />
+      <ListaProvider >
+        <Input />
+        <Lista />
+      </ListaProvider>
     </div>
   );
 }
